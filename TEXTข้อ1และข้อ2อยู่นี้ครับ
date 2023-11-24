@@ -1,0 +1,17 @@
+1).what should be instance variables?
+      *private int number มีหน้าที่แทนจำนวนในอาเรย์
+      *private int[] n    คืออาเรย์ที่ใช้เก็บค่าที่รับเข้ามา
+  what should be instance methods?
+      *public Main(int number)  ตัวสร้างที่ใช้เริ่มต้นคลาสด้วยจำนวน elements ที่กำหนดมา
+      *public void Swap()       เป็นเมทอดที่เอาไว้ใช้สลับตำแหน่งของค่าในอาเรย์ให้เรียงจากเลขน้อยไปมาก
+      *public void Result()     เป้นเมทอดที่ใช้สำหรับแสดงค่าข้อมูลที่ถูกเรียงลำดับเสร็จเรียบร้อยเเล้ว
+2).for each method proposed above, how do you plan to implement it?
+      *Main(int number)
+          -Input : number เป็นค่าที่จะถูกรับเข้ามาเพื่อเอาไว้เป็นจำนวน elements ที่จะเก็บไว้ในอาเรย์
+          -returned : ทำการกำหนดค่าตัวแปร number และ n จากนั้นสร้างอาเรย์ที่มีขนาดเท่ากับค่า number
+      *Swap()
+          -Input : ใช้ค่าในตัวแปร n
+          -returned : จะคืนค่่าในอาเรย์ที่สลับตำแหน่งจากการถูกเรียงค่าจากน้อยไปหามากเเล้ว
+      *Result
+          -Input : ใช้ค่าในตัวแปร n
+          -returned : แสดงผลลัพธ์ที่ได้หลังจากเรียงลำดับจากน้อยไปมากแล้ว
