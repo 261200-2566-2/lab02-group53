@@ -1,17 +1,43 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.print("Hello and welcome!");
-
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+    private int number;
+    private int[] n;
+    public Main(int number) {
+        this.number = number;
+        this.n = new int[number];
+    }
+    public void Swap(){
+        int x = n.length;
+        for(int i = 0; i < x; i++){
+            for(int j = i+1; j < x; j++){
+                if(n[i] > n[j]){
+                    int temp = n[i];
+                    n[i] = n[j];
+                    n[j] = temp;
+                }
+            }
         }
+    }
+    public void Result(){
+        System.out.println("Result");
+        for(int i = 0; i < number; i++){
+            System.out.println(n[i] + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter the number : ");
+        int number = s.nextInt();
+        Main Num = new Main(number);
+
+        for(int i = 0; i < number; i++){
+            Scanner x = new Scanner(System.in);
+            System.out.print("Enter Input "+ ( i + 1 ) + " = ");
+            int value = x.nextInt();
+            Num.n[i] = value;
+        }
+        Num.Swap();
+        Num.Result();
     }
 }
